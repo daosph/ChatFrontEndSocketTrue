@@ -85,4 +85,8 @@ export class ChatComponent implements OnInit, OnDestroy {
     return document.body.classList.contains('dark-mode');
   }
 
+  metodoPrueba(){
+    console.log("hola")
+  }
+
 }
