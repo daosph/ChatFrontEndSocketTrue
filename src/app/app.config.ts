@@ -4,12 +4,13 @@ import { provideClientHydration } from '@angular/platform-browser';
 import { provideHttpClient } from '@angular/common/http';  // Importa provideHttpClient
 
 import { routes } from './app.routes';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideClientHydration(),
-    provideHttpClient()  // Añade provideHttpClient aquí
+    provideHttpClient(), provideAnimationsAsync()  // Añade provideHttpClient aquí
   ]
 };

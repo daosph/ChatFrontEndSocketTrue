@@ -4,11 +4,14 @@ import { ChatService } from '../../services/chat.service';
 import { ChatMessage } from '../../models/chatMessage';
 import { Subscription } from 'rxjs';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms'; 
+import {MatIconModule} from  '@angular/material/icon' ;
+import {MatButtonModule} from  '@angular/material/button' ;
+import {MatBadgeModule} from  '@angular/material/badge' ;
 
 @Component({
   standalone: true,
-  imports: [RouterOutlet, FormsModule, CommonModule],
+  imports: [RouterOutlet, FormsModule, CommonModule,MatIconModule,MatButtonModule,MatBadgeModule],
   selector: 'app-chat',
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.css']
@@ -83,8 +86,6 @@ export class ChatComponent implements OnInit, OnDestroy {
 
   isDarkMode(): boolean {
     return document.body.classList.contains('dark-mode');
-  }
-
-  
+  }
 
 }

@@ -1,9 +1,13 @@
+chat ccs
+
+
 /* chat.component.css */
 
 .chat-container {
   display: flex;
   flex-direction: column;
   height: 100%;
+  margin-top: 5%;
 }
 
 .chat-messages {
@@ -150,5 +154,16 @@ body.dark-mode .message-sent {
 
 body.dark-mode .message-received {
   background-color: #444444 !important;
-  color: #ffffff !important;
+  color: hsl(0, 0%, 100%) !important;
+}
+
+
+
+.dark-mode-switch{
+  margin-top: -96%;
+  margin-right: 1%;
+}
+
+.luz{
+  margin-top: -96%;
 }
