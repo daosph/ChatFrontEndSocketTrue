@@ -1,70 +1,82 @@
-chat ccs
-
-
 /* chat.component.css */
 
+/* Contenedor principal del chat */
 .chat-container {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  margin-top: 5%;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  margin: 0; /* Elimina márgenes externos */
+  padding: 0; /* Elimina rellenos externos */
 }
 
+/* Área de mensajes */
 .chat-messages {
-  flex: 1;
-  overflow-y: auto;
+  flex: 1; /* Permite que esta sección ocupe el espacio restante */
+  overflow-y: auto; /* Habilita el desplazamiento si hay muchos mensajes */
   padding: 10px;
 }
 
+/* Contenedor de cada mensaje */
 .message-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end; /* Alinea los mensajes enviados a la derecha */
   margin-bottom: 10px;
 }
 
+/* Mensaje individual */
 .message {
   padding: 10px;
   border-radius: 10px;
   max-width: 70%;
 }
 
+/* Mensajes enviados */
 .message-sent {
   align-self: flex-end;
   background-color: #dcf8c6; 
   color: black; 
 }
 
+/* Mensajes recibidos */
 .message-received {
   margin-right: auto;
   background-color: #a59cfc; 
   color: black; 
 }
 
+/* Texto del mensaje */
 .message-text {
   margin: 0;
 }
 
+/* Hora del mensaje */
 .message-time {
   font-size: 0.8rem;
   color: #666666;
 }
 
+/* Área de entrada de mensajes */
 .message-input {
   display: flex;
   align-items: center;
   padding: 10px;
-  margin-top: auto; 
+  background-color: #1a1b1f;
+  border-top: 1px solid #44474e;
+  position: sticky; /* Fija el input en la parte inferior del contenedor */
+  bottom: 0;
 }
 
+/* Campo de texto */
 .message-input textarea {
-  flex: 1;
+  flex: 1; /* Ocupa todo el espacio restante */
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #cccccc;
-  resize: none;
+  resize: none; /* Desactiva el redimensionamiento del textarea */
   margin-right: 10px;
 }
 
+/* Botón de enviar */
 .send-button {
   padding: 10px;
   border: none;
@@ -78,9 +90,7 @@ chat ccs
   background-color: #0056b3;
 }
 
-.dark-mode-switch {
-  margin-left: 10px;
-}
+/* Interruptor de modo oscuro */
 
 .switch {
   position: relative;
@@ -127,6 +137,7 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
+/* Modo oscuro */
 body.dark-mode {
   background-color: #121212 !important;
   color: #ffffff !important;
@@ -157,13 +168,7 @@ body.dark-mode .message-received {
   color: hsl(0, 0%, 100%) !important;
 }
 
-
-
-.dark-mode-switch{
-  margin-top: -96%;
-  margin-right: 1%;
-}
-
-.luz{
-  margin-top: -96%;
+/* Luz y ajuste del switch de modo oscuro */
+.luz {
+  margin-left: 10px;
 }

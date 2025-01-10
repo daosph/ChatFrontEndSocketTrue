@@ -1,0 +1,27 @@
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  /* Etiquetas de los campos */
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555555;
+    margin-top: 10px;
+  }
+  
+  /* Campos de texto */
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  h2{
+    text-align: center;
+  }

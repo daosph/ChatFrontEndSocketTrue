@@ -5,11 +5,13 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { UserResponse } from '../../../models/UserResponse ';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { UserModalComponent } from '../../user-modal/user-modal.component';
 
 @Component({
   selector: 'app-login-to-chat',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule,MatDialogModule],
   templateUrl: './login-to-chat.component.html',
   styleUrls: ['./login-to-chat.component.css']
 })
@@ -28,7 +30,7 @@ export class LoginToChatComponent {
     return this.formUser.get('password')
   }
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService, private router: Router , private dialog: MatDialog) {}
 
   onSubmit(): void {
     if (this.formUser.valid) {
@@ -47,4 +49,14 @@ export class LoginToChatComponent {
       console.error('Formulario inválido');
     }
   }
+
+createUser():void{
+  this.dialog.open(UserModalComponent, {
+    width: '600px', // Tamaño del modal
+    data: {} // Puedes pasar datos aquí si es necesario
+  });
 }
+
+
+}
+
