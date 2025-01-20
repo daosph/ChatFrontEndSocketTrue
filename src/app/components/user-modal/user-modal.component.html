@@ -1,14 +1,50 @@
 <h2 mat-dialog-title>Create User</h2>
-<mat-dialog-content>
-    <div class="input-group">
-        <label for="user">Enter a username</label>
-        <input type="text" id="user" formControlName="user" name="user" placeholder="Enter your user">
-      </div>
 
-      <div class="input-group">
-        <label for="user">Enter a password</label>
-        <input type="text" id="user" formControlName="user" name="user" placeholder="Enter your password">
-      </div>
+<mat-dialog-content>
+  
+  <div class="input-group">
+    <label for="user">Enter a name </label>
+    <input type="text" id="name" formControlName="text" name="name" placeholder="Enter your name">
+  </div>
+
+  <div class="input-group">
+    <label for="user">Enter a last name</label>
+    <input type="text" id="lastName" formControlName="text" name="lastName" placeholder="Enter your last name">
+  </div>
+
+  <div class="input-group">
+    <label for="user">Enter a phone</label>
+    <input type="text" id="phone" formControlName="text" name="phone" placeholder="Enter your phone" maxlength="15">
+  </div>
+
+
+
+  <div class="input-group">
+    <label for="user">Enter a username</label>
+    <input type="text" id="user" formControlName="user" name="user" placeholder="Enter your user">
+  </div>
+
+ 
+
+  <div class="input-group">
+    <label for="user">Enter a password</label>
+    <input type="password" id="password" formControlName="password" name="password" placeholder="Enter your password">
+  </div>
+
+  <div class="select">
+  <label for="select">Enter a group</label>
+  <mat-form-field>
+    <mat-label>Group</mat-label>
+    <mat-select [(value)]="formPerson.controls['rol_id'].value">
+      <mat-option *ngFor="let rol of datos" [value]="rol.id">
+        {{ rol.nombre }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+
+
 
 </mat-dialog-content>
 <mat-dialog-actions align="end">

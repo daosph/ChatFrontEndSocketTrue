@@ -19,7 +19,8 @@ export class LoginToChatComponent {
 
   formUser = new FormGroup({
     user: new FormControl('', [Validators.required]),
-    password: new FormControl('', [Validators.required])
+    password: new FormControl('', [Validators.required]),
+    
   });
 
   get user(){
@@ -52,8 +53,8 @@ export class LoginToChatComponent {
 
 createUser():void{
   this.dialog.open(UserModalComponent, {
-    width: '600px', // Tamaño del modal
-    data: {} // Puedes pasar datos aquí si es necesario
+    width: '600px', 
+    data: {} 
   });
 }
 
