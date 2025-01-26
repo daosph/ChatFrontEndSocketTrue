@@ -1,27 +1,26 @@
 <h2 mat-dialog-title>Create User</h2>
 
 <mat-dialog-content>
-  
+  <form [formGroup]="formPerson">
   <div class="input-group">
     <label for="user">Enter a name </label>
-    <input type="text" id="name" formControlName="text" name="name" placeholder="Enter your name">
+    <input type="text" id="nombre" formControlName="nombre" name="nombre" placeholder="Enter your name">
   </div>
 
   <div class="input-group">
     <label for="user">Enter a last name</label>
-    <input type="text" id="lastName" formControlName="text" name="lastName" placeholder="Enter your last name">
+    <input type="text" id="apellido" formControlName="apellido" name="apellido" placeholder="Enter your last name">
   </div>
 
   <div class="input-group">
     <label for="user">Enter a phone</label>
-    <input type="text" id="phone" formControlName="text" name="phone" placeholder="Enter your phone" maxlength="15">
+    <input type="text" id="telefono" formControlName="telefono" name="telefono" placeholder="Enter your phone" maxlength="15">
   </div>
-
 
 
   <div class="input-group">
     <label for="user">Enter a username</label>
-    <input type="text" id="user" formControlName="user" name="user" placeholder="Enter your user">
+    <input type="text" id="usuario" formControlName="usuario" name="usuario" placeholder="Enter your user">
   </div>
 
  
@@ -44,7 +43,7 @@
 </div>
 
 
-
+</form>
 
 </mat-dialog-content>
 <mat-dialog-actions align="end">
