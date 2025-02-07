@@ -54,10 +54,9 @@ export class LoginToChatComponent {
 createUser():void{
   this.dialog.open(UserModalComponent, {
     width: '600px', 
-    data: {} 
+    
   });
 }
-
 
 }
 

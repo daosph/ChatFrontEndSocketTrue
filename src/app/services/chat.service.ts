@@ -4,7 +4,7 @@ import SockJS from 'sockjs-client';
 import { Observable, Subject } from 'rxjs';
 import { ChatMessage } from '../models/chatMessage';
 import { HttpClient } from '@angular/common/http';
-import { url } from 'inspector';
+import { formulario } from '../models/formulario';
 
 @Injectable({
   providedIn: 'root'
@@ -18,14 +18,22 @@ export class ChatService {
     this.initConnectionSocket();
   }
 
-  private apiUrl = 'http://localhost:3000/api/get-roles';  // URL de la API
+  private apiUrl = 'http://localhost:3000/api';  // URL de la API
+
+ 
+
+  
+  postFormulario(formulario: formulario) {
+    return this.http.post<string>(this.apiUrl + '/register-user', formulario); // Ensure it's expecting a string response
+  }
   
 
 
   getRoles(): Observable<any> {
-    return this.http.get<any>(this.apiUrl);
+    return this.http.get<any>(this.apiUrl+'/get-roles');
   }
 
+ 
  
 
   private initConnectionSocket() {

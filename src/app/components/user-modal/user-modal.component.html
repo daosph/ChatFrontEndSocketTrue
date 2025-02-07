@@ -4,23 +4,23 @@
   <form [formGroup]="formPerson">
   <div class="input-group">
     <label for="user">Enter a name </label>
-    <input type="text" id="nombre" formControlName="nombre" name="nombre" placeholder="Enter your name">
+    <input type="text" id="name" formControlName="name" name="name" placeholder="Enter your name">
   </div>
 
   <div class="input-group">
     <label for="user">Enter a last name</label>
-    <input type="text" id="apellido" formControlName="apellido" name="apellido" placeholder="Enter your last name">
+    <input type="text" id="lastName" formControlName="lastName" name="lastName" placeholder="Enter your last name">
   </div>
 
   <div class="input-group">
     <label for="user">Enter a phone</label>
-    <input type="text" id="telefono" formControlName="telefono" name="telefono" placeholder="Enter your phone" maxlength="15">
+    <input type="text" id="telephone" formControlName="telephone" name="telephone" placeholder="Enter your phone" maxlength="15">
   </div>
 
 
   <div class="input-group">
     <label for="user">Enter a username</label>
-    <input type="text" id="usuario" formControlName="usuario" name="usuario" placeholder="Enter your user">
+    <input type="text" id="user" formControlName="user" name="user" placeholder="Enter your user">
   </div>
 
  
@@ -34,7 +34,7 @@
   <label for="select">Enter a group</label>
   <mat-form-field>
     <mat-label>Group</mat-label>
-    <mat-select [(value)]="formPerson.controls['rol_id'].value">
+    <mat-select formControlName = "rol_id">
       <mat-option *ngFor="let rol of datos" [value]="rol.id">
         {{ rol.nombre }}
       </mat-option>
@@ -48,5 +48,5 @@
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button color="primary">Create</button>
+  <button mat-button color="primary" (click)="enviarFormulario()">Create</button>
 </mat-dialog-actions>
