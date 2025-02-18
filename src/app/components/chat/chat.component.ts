@@ -8,10 +8,11 @@ import { FormsModule } from '@angular/forms';
 import {MatIconModule} from  '@angular/material/icon' ;
 import {MatButtonModule} from  '@angular/material/button' ;
 import {MatBadgeModule} from  '@angular/material/badge' ;
+import {MatMenuModule} from '@angular/material/menu';
 
 @Component({
   standalone: true,
-  imports: [RouterOutlet, FormsModule, CommonModule,MatIconModule,MatButtonModule,MatBadgeModule],
+  imports: [RouterOutlet, FormsModule, CommonModule,MatIconModule,MatButtonModule,MatBadgeModule, MatMenuModule],
   selector: 'app-chat',
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.css']

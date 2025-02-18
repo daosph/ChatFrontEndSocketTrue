@@ -172,3 +172,15 @@ body.dark-mode .message-received {
 .luz {
   margin-left: 10px;
 }
+
+.bi  {
+  transform: scale3d(1.5, 1.5, 1.5);
+  color: aliceblue;
+}
+
+.icon{
+  margin-left: 97%;
+  display: block;
+}
+
+
